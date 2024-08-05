@@ -1,0 +1,537 @@
+:root {
+    --bg-color: #F9F5ED;
+    --fixed-hover-color: #ffebc2;
+    --text-color: #4a4a4a;
+    --accent-color: #a7c7e7;
+    --hover-color: #20619d;
+    --eidon-color: #ff0070;
+    --eidon-color2: #00ffff;
+    --header-bg-color: rgba(70, 90, 110, 0.9);
+    --link-content-color: #C06A45;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Varela', sans-serif;
+    color: var(--text-color);
+}
+
+.emphasis {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+/* Main Nav */ 
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#main-nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav li {
+    margin-left: 2rem;
+}
+
+#main-nav a {
+    color: var(--text-color);;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#main-nav a:hover {
+    color: var(--hover-color);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.header-fixed {
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-fixed .header-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-content .portrait {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;
+}
+
+.header-fixed #main-nav a {
+    color: white;
+}
+
+.header-fixed #main-nav a:hover {
+    color: var(--fixed-hover-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    background-image: url('./img/thinker-full.jpeg');
+    background-size: cover;
+    background-position: 100% 20%;
+    background-attachment: fixed;
+    color: white;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero .portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    filter: brightness(0) invert(1); /* This makes the icons white */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 1rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/****************
+Content Sections
+***************/
+/* General */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.container h1, h2, h3 {
+    text-align: center;
+}
+
+.container a {
+    color: var(--link-content-color);
+    text-decoration: none;
+}
+
+.container a:hover {
+    color: var(--link-content-color);
+    text-decoration: underline;
+}
+
+/* Current Role Styles */
+#currently a {
+    color: var(--eidon-color);
+    text-decoration: none;
+}
+
+#currently a:hover {
+    color: var(--eidon-color);
+    text-decoration: underline;
+}
+
+#currently h2 {
+    margin-bottom: 0rem;
+}
+
+.current-role a {
+    color: var(--eidon-color);
+}
+
+.current-role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.current-role span {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.company-logo {
+    height: 30px; /* Adjust this value to fit your logo */
+    width: auto;
+}
+
+/* Previous Section */
+.previous-list details {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.previous-list summary {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.previous-list summary:hover {
+    color: var(--hover-color);
+}
+
+.previous-list details {
+    margin-bottom: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.previous-list summary {
+    padding: 1rem;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.previous-list summary:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.previous-list details[open] summary {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.previous-list details p {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    margin: 0;
+}
+
+.previous-list details p:last-child {
+    padding-bottom: 1rem;
+}
+
+.previous-list .subtitle {
+    font-style: italic;
+    font-weight: lighter;
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+
+/* Add a custom arrow indicator */
+.previous-list summary::marker {
+    display: none;
+}
+
+.previous-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.previous-list summary::after {
+    content: '\25BC';
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.previous-list details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color); /* Default color */
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.header-fixed .burger-menu div {
+    background-color: white; /* Color after scrolling */
+}
+
+/* Highlighted Tweets Section */
+#highlighted-tweets {
+    background-color: var(--bg-color);
+    padding: 2rem 0;
+}
+
+#highlighted-tweets .container {
+    max-width: 85%; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden; /* This will create a mask effect */
+}
+
+.tweets-container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    padding: 0 5%; /* This creates space on the sides for the mask effect */
+}
+
+.tweets-container::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+.tweet {
+    flex: 0 0 300px; /* Fixed width, don't grow or shrink */
+    width: 300px;
+    margin-right: 20px; /* Increase space between tweets */
+    scroll-snap-align: center; /* Change to center for better scrolling */
+}
+
+.twitter-tweet {
+    margin: 0 !important;
+}
+
+#highlighted-tweets {
+    position: relative;
+}
+
+#highlighted-tweets::before,
+#highlighted-tweets::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%; /* Match the padding of .tweets-container */
+    z-index: 1;
+    pointer-events: none;
+}
+
+#highlighted-tweets::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+
+#highlighted-tweets::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1024px) {
+    .content-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .tweets-sidebar {
+        display: block;
+        width: 25%;
+        position: sticky;
+        top: 100px;
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 30vh;
+        background-position: 0 22%;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-position: 0 20%;
+        background-attachment: scroll; /* This often works better on mobile */
+    }
+
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color); /* Use the same background as the initial header */
+    }
+
+    #main-nav ul li a {
+        color: var(--text-color); /* Use the default text color */
+    }
+
+    .header-fixed #main-nav ul li a {
+        color: white; /* Use white text after scrolling */
+        background-color: var(--header-bg-color);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #main-nav ul.show {
+        display: flex;
+    }
+
+    #main-nav li {
+        margin: 0;
+        text-align: center;
+    }
+
+    #main-nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    
+    /* Current Role */
+    .current-role {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .current-role span {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .company-logo {
+        height: 15px; /* Slightly smaller for mobile */
+    }
+
+    /* Tweets */
+    .tweet {
+        width: 250px; /* Slightly smaller on mobile */
+    }
+}
+
+/* Adjust icon size for mobile */
+@media (max-width: 768px) {
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
+}
