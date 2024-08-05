@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2.5em;
 }
 
 #main-nav ul {
@@ -114,10 +114,10 @@ header {
     position: relative;
     background-image: url('./img/thinker-full.jpeg');
     background-size: cover;
-    background-position: 100% 20%;
+    background-position: 100% 19%;
     background-attachment: fixed;
     color: white;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
@@ -159,16 +159,24 @@ header {
 .hero p {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
     font-weight: lighter;
+}
+
+#last-updated {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.51);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
 }
 
 /* Social Icons Styles */
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-icon {
@@ -360,6 +368,54 @@ Content Sections
     background-color: white; /* Color after scrolling */
 }
 
+/* Writing Section */
+#writing {
+    background-color: var(--bg-color);
+    padding: 2rem 0;
+}
+
+#writing .container {
+    margin: 0 auto;
+}
+
+.writing-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.writing-column {
+    width: 44%; /* Adjust as needed */
+}
+
+.writing-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.writing-list li {
+    margin-bottom: 1rem;
+}
+
+.writing-date {
+    display: block;
+    color: #666;
+    font-size: 0.8em;
+    margin-bottom: 0.2rem;
+}
+
+.writing-title {
+    font-size: 1.4em;
+    color: var(--link-content-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.writing-title:hover {
+    color: #955236; /* Slightly darker shade for hover */
+    text-decoration: underline;
+}
+
 /* Highlighted Tweets Section */
 #highlighted-tweets {
     background-color: var(--bg-color);
@@ -444,12 +500,7 @@ Content Sections
     }
 }
 
-@media (min-width: 768px) {
-    .hero {
-        height: 30vh;
-        background-position: 0 22%;
-    }
-    
+@media (min-width: 768px) {    
     .hero-content {
         max-width: 600px;
     }
@@ -458,6 +509,7 @@ Content Sections
 @media (max-width: 768px) {
     .hero {
         background-position: 0 20%;
+        height: 40vh;
         background-attachment: scroll; /* This often works better on mobile */
     }
 
@@ -517,6 +569,15 @@ Content Sections
     /* Tweets */
     .tweet {
         width: 250px; /* Slightly smaller on mobile */
+    }
+
+    /* Writing */
+    .writing-columns {
+        flex-direction: column;
+    }
+    
+    .writing-column {
+        width: 100%;
     }
 }
 
