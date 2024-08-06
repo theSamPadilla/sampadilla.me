@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .light-emphasis {
-    font-weight: 400;
+    font-weight: 200;
     font-style: italic;
 }
 
@@ -170,7 +170,7 @@ header {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 #last-updated {
@@ -339,7 +339,7 @@ section:last-child {
 
 .previous-list .subtitle {
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     padding-bottom: 0;
     padding-top: 1rem;
 }
@@ -511,7 +511,7 @@ Themes Page
 
 .theme-title {
     color: var(--hover-color);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2rem;
     font-style: italic;
     font-family: script;
