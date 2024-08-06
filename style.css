@@ -607,14 +607,6 @@ Themes Page
     .main-content {
         width: 70%;
     }
-
-    .tweets-sidebar {
-        display: block;
-        width: 25%;
-        position: sticky;
-        top: 100px;
-        align-self: flex-start;
-    }
 }
 
 @media (min-width: 768px) {    
@@ -677,10 +669,6 @@ Themes Page
     .current-role span {
         margin-right: 0;
         margin-bottom: 0.5rem;
-    }
-
-    .company-logo {
-        height: 15px; /* Slightly smaller for mobile */
     }
 
     /* Tweets */
