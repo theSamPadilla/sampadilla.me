@@ -203,6 +203,9 @@ header {
     transform: scale(1.1);
 }
 
+/****************
+Content Sections
+***************/
 /* Main Content */
 main {
     padding-top: 60px;
@@ -218,9 +221,6 @@ section:last-child {
     border-bottom: none;
 }
 
-/****************
-Content Sections
-***************/
 /* General */
 .container {
     max-width: 900px;
@@ -231,6 +231,10 @@ Content Sections
 
 .container h1, h2, h3 {
     text-align: center;
+}
+
+.container h3 {
+    margin-bottom: 2rem;
 }
 
 .container a {
