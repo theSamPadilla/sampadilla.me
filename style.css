@@ -312,6 +312,7 @@ section {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
     overflow: hidden;
+    background-color: white;
 }
 
 .previous-list summary {
@@ -456,6 +457,37 @@ section {
     position: absolute;
     left: 0;
     color: var(--accent-color);
+}
+
+/* Media & Awards Styles */
+.media-awards-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0; /* Add this line */
+}
+
+.media-awards-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.media-awards-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0; /* Add this line */
+    padding-bottom: 0; /* Add this line */
+}
+
+.award-title {
+    font-weight: bold;
+    color: var(--hover-color);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.media-awards-list p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 /* Highlighted Tweets Section */
