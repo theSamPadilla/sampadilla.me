@@ -3,6 +3,7 @@
     --fixed-hover-color: #ffebc2;
     --text-color: #4a4a4a;
     --accent-color: #a7c7e7;
+    --footer-link-color: #345777;
     --hover-color: #20619d;
     --eidon-color: #ff0070;
     --eidon-color2: #00ffff;
@@ -763,4 +764,18 @@ footer {
     color: var(--text-color);
     font-weight: bold;
     font-family: monospace;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    font-size: xx-small;
+    color: var(--footer-link-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
