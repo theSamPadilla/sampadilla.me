@@ -279,7 +279,7 @@ section:last-child {
     color: var(--text-color);
     margin-bottom: 0.5rem;
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 .company-logo {
