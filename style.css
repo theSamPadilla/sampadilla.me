@@ -600,20 +600,6 @@ Themes Page
     margin-bottom: 0rem;
 }
 
-.themes-page .hero {
-        text-align: center;
-        position: relative;
-        background-image: url('./img/thinker-full.jpeg');
-        background-size: cover;
-        background-position: 100% 19%;
-        background-attachment: fixed;
-        color: white;
-        height: 33vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
 .themes-page #header {
     background-color: var(--bg-color);
     transition: background-color 0.3s ease, transform 0.3s ease;
